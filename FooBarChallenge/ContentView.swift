@@ -29,6 +29,10 @@ struct ContentView: View {
             number += 1
             update()
         }
+        .onLongPressGesture(minimumDuration: 2) {
+            number = 0
+            bgColor = .black
+        }
     }
     
     func update() {
